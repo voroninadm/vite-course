@@ -1,12 +1,20 @@
 import {defineConfig} from "vite";
 import {resolve} from 'path';
+import createSvgSpritePlugin from "vite-plugin-svg-spriter";
 
 
 const FRONT_PATH = 'src';
 
 export default defineConfig({
     root: "src",
+    plugins: [
+        createSvgSpritePlugin({
+            svgFolder: `src/assets/images/svg`,
+        }),
+    ],
     build: {
+        minify: true,
+        minifyCSS: "esbuild/lightningcss",
         rollupOptions: {
             input: {
                 index: resolve(__dirname,`${FRONT_PATH}/index.html`),
