@@ -1,12 +1,9 @@
-// import './style.scss';
-// import javascriptLogo from './javascript.svg'
-// import viteLogo from '/vite.svg'
 import { setupCounter } from '@/assets/js/modules/counter.js';
 
 document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
-        <svg style="width: 950px">
+        <svg>
             <use href="#vite"></use>
         </svg>
     </a>
@@ -17,11 +14,10 @@ document.querySelector('#app').innerHTML = `
     </a>
     <h1>Hello Vite!</h1>
 
-<ul>
-    <li>
-    <a href="/index">to index page</a>
-    </li>
-</ul>
+<div>
+    <a href="/index">To index page</a>
+</div>
+
     <div class="card">
       <button id="counter" type="button"></button>
     </div>

@@ -1,6 +1,7 @@
 import {defineConfig} from "vite";
 import {resolve} from 'path';
 import createSvgSpritePlugin from "vite-plugin-svg-spriter";
+import {ViteImageOptimizer} from "vite-plugin-image-optimizer";
 
 
 const FRONT_PATH = 'src';
@@ -11,10 +12,19 @@ export default defineConfig({
         createSvgSpritePlugin({
             svgFolder: `src/assets/images/svg`,
         }),
+        ViteImageOptimizer({
+            jpg: {
+                quality: 75,
+            },
+            png: {
+                quality: 75,
+            },
+        })
     ],
     build: {
         minify: true,
         minifyCSS: "esbuild/lightningcss",
+        sourcemap: true,
         rollupOptions: {
             input: {
                 index: resolve(__dirname,`${FRONT_PATH}/index.html`),

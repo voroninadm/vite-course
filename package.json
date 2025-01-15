@@ -10,7 +10,10 @@
   },
   "devDependencies": {
     "sass": "^1.83.4",
-    "vite": "^6.0.5"
+    "sharp": "^0.33.5",
+    "svgo": "^3.3.2",
+    "vite": "^6.0.5",
+    "vite-plugin-image-optimizer": "^1.1.8"
   },
   "dependencies": {
     "vite-plugin-svg-spriter": "^1.0.0"
