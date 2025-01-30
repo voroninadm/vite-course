@@ -15,7 +15,7 @@ document.querySelector('#app').innerHTML = `
     <h1>Hello Vite!</h1>
 
 <div>
-    <a href="/index">To index page</a>
+    <a href="/vite-course/index">To index page</a>
 </div>
 
     <div class="card">

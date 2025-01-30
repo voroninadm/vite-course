@@ -23,7 +23,6 @@ export default defineConfig({
         })
     ],
     build: {
-        // outDir: '../dist',
         minify: true,
         minifyCSS: "esbuild/lightningcss",
         sourcemap: true,
