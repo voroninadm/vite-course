@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build --base=/build",
+    "preview": "vite preview",
+    "staging": "vite build --mode staging"
   },
   "devDependencies": {
     "sass": "^1.83.4",

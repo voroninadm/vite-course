@@ -7,6 +7,7 @@ import {ViteImageOptimizer} from "vite-plugin-image-optimizer";
 const FRONT_PATH = 'src';
 
 export default defineConfig({
+    base: "/vite-course/",
     root: "src",
     plugins: [
         createSvgSpritePlugin({
@@ -22,6 +23,7 @@ export default defineConfig({
         })
     ],
     build: {
+        outDir: '../dist',
         minify: true,
         minifyCSS: "esbuild/lightningcss",
         sourcemap: true,
