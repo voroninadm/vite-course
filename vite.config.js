@@ -31,12 +31,22 @@ export default defineConfig({
                 index: resolve(__dirname,`${FRONT_PATH}/index.html`),
                 main: resolve(__dirname,`${FRONT_PATH}/pages/main/index.html`),
                 about: resolve(__dirname,`${FRONT_PATH}/pages/about/index.html`),
+                form: resolve(__dirname,`${FRONT_PATH}/pages/form/index.html`),
             }
         },
     },
     resolve: {
         alias: {
             '@': resolve(__dirname, `${FRONT_PATH}`),
+        },
+    },
+    test: {
+        // Здесь можно настроить параметры Vitest
+        globals: true, // Включает использование глобальных функций тестирования, таких как describe и it
+        environment: 'jsdom',// Среда тестирования, например, jsdom для тестирования DOM
+        setupFiles: "./vitest.setup.js",   // Путь к файлу настройки (если требуется)
+        coverage: {
+            exclude: ["node_modules/"],  // Исключаемые файлы и папки
         },
     },
 })
