@@ -20,6 +20,8 @@
     "vitest": "^3.0.4"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.3",
+    "tailwindcss": "^4.0.3",
     "vite-plugin-svg-spriter": "^1.0.0"
   }
 }

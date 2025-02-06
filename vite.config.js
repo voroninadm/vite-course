@@ -2,6 +2,7 @@ import {defineConfig} from "vite";
 import {resolve} from 'path';
 import createSvgSpritePlugin from "vite-plugin-svg-spriter";
 import {ViteImageOptimizer} from "vite-plugin-image-optimizer";
+import tailwindcss from '@tailwindcss/vite'
 
 
 const FRONT_PATH = 'src';
@@ -10,6 +11,7 @@ export default defineConfig({
     base: "/vite-course/",
     root: "src",
     plugins: [
+        tailwindcss(),
         createSvgSpritePlugin({
             svgFolder: `src/assets/images/svg`,
         }),
